@@ -15,23 +15,16 @@ describe TicketsController do
     end
 
     describe "GET show" do
-      xit "assigns the requested ticket as @ticket" do
+      it "assigns the requested ticket as @ticket" do
         get :show, {:id => ticket.to_param}, valid_session
         expect(assigns(:ticket)).to eq(ticket)
       end
     end
 
     describe "GET new" do
-      xit "assigns a new ticket as @ticket" do
+      it "assigns a new ticket as @ticket" do
         get :new, {}, valid_session
         expect(assigns(:ticket)).to be_a_new(Ticket)
-      end
-    end
-
-    describe "GET edit" do
-      xit "assigns the requested ticket as @ticket" do
-        get :edit, {:id => ticket.to_param}, valid_session
-        expect(assigns(:ticket)).to eq(ticket)
       end
     end
 
