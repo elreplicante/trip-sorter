@@ -1,2 +1,32 @@
 <h1>Tickets#index</h1>
-<p>Find me in app/views/tickets/index.html.erb</p>
+<table>
+  <thead>
+    <tr>
+      <th>Departure</th>
+      <th>Arrival</th>
+      <th>Transportation</th>
+      <th>Seat</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket.departure %></td>
+        <td><%= ticket.arrival %></td>
+        <td><%= ticket.transportation %></td>
+        <td><%= ticket.seat %></td>
+        <td><%= link_to 'Show', ticket %></td>
+        <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+        <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ticket', new_ticket_path %>
