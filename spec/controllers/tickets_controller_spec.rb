@@ -30,21 +30,21 @@ describe TicketsController do
 
     describe "POST create" do
       describe "with valid params" do
-        xit "creates a new Ticket" do
+        it "creates a new Ticket" do
           expect {
             post :create, {:ticket => valid_ticket_attributes}, valid_session
           }.to change(Ticket, :count).by(1)
         end
 
-        xit "assigns a newly created ticket as @ticket" do
+        it "assigns a newly created ticket as @ticket" do
           post :create, {:ticket => valid_ticket_attributes}, valid_session
           expect(assigns(:ticket)).to be_a(Ticket)
           expect(assigns(:ticket)).to be_persisted
         end
 
-        xit "redirects to the created ticket" do
+        it "redirects to the show tickets view" do
           post :create, {:ticket => valid_ticket_attributes}, valid_session
-          expect(response).to redirect_to(Ticket.last)
+          expect(response).to redirect_to(tickets_path)
         end
       end
 
@@ -52,12 +52,12 @@ describe TicketsController do
         before(:each) do
           Ticket.any_instance.stub(:save).and_return(false)
         end
-        xit "assigns a newly created but unsaved ticket as @ticket" do
+        it "assigns a newly created but unsaved ticket as @ticket" do
           post :create, {:ticket => { "title" => "invalid value" }}, valid_session
           expect(assigns(:ticket)).to be_a_new(Ticket)
         end
 
-        xit "re-renders the 'new' template" do
+        it "re-renders the 'new' template" do
           post :create, {:ticket => { "title" => "invalid value" }}, valid_session
           expect(response).to render_template("new")
         end
