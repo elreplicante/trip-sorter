@@ -34,3 +34,11 @@ destination.
 team  is  the  best  way  to  tackle  problems,  since  this  task  is  meant  to  be  an
 assessment of your personal skills, please refrain from asking friends / cooperating
 with other people while solving this task.What we look at
+
+
+##Instrucions
+* Run Rails console by typing <code>rails c</code>
+* Load tickets script
+    *<code>require './scripts/load_tickets.rb'</code>
+    *<code>load_default_file</code>
+* Tickets are stored at <code>./scripts/tickets.json</code>
