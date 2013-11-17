@@ -64,4 +64,19 @@ describe TicketsController do
       end
     end
   end
+
+  describe "DELETE destroy" do
+      it "destroys the requested ticket" do
+        ticket = FactoryGirl.create(:ticket)
+        expect {
+          delete :destroy, {:id => ticket.to_param}, valid_session
+        }.to change(Ticket, :count).by(-1)
+      end
+
+      it "redirects to the tickets list" do
+        delete :destroy, {:id => ticket.to_param}, valid_session
+        expect(response).to redirect_to(tickets_url)
+      end
+    end
+  
 end

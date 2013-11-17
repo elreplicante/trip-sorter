@@ -1,5 +1,5 @@
 class TicketsController < ApplicationController
-  before_action :set_ticket, only: [:show]
+  before_action :set_ticket, only: [:show, :destroy]
 
   def index
     @tickets = Ticket.all
@@ -21,6 +21,13 @@ class TicketsController < ApplicationController
       else
         format.html { render action: 'new' }
       end
+    end
+  end
+
+  def destroy
+    @ticket.destroy
+    respond_to do |format|
+      format.html { redirect_to tickets_url }
     end
   end
 
