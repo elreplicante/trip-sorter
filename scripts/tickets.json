@@ -1,13 +1,2 @@
-{
-  "Departure":      "Madrid",
-  "Arrival":        "Barcelona",
-  "Transportation": "Train",
-  "Seat":           "22A"
-}
-
-{
-  "Departure":      "Barcelona",
-  "Arrival":        "Paris",
-  "Transportation": "Plane",
-  "Seat":           "12B"
-}
+{ "Departure": "Madrid", "Arrival": "Barcelona", "Transportation": "Train", "Seat": "22A"}
+{ "Departure": "Barcelona", "Arrival":  "Paris", "Transportation": "Plane", "Seat": "12B" }
