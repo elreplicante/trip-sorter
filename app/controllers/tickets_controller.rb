@@ -38,5 +38,18 @@ class TicketsController < ApplicationController
     end
   def set_ticket
       @ticket = Ticket.find(params[:id])
+  end
+
+  def sort_tickets!
+    @tickets.each_with_index do |ticket, index|
+      while index <= @tickets.length
+        if ticket[:departure] == @tickets[index + 1][:arrival]
+          @tickets[index + 1], @tickets[index] = @tickets[index], @tickets[index + 1]
+        end
+        index = index + 1
+      end
     end
+    @tickets
+  end
+
 end

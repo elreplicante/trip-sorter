@@ -30,13 +30,8 @@ trip, i.e., it's one continuous trip with no interruptions.
 order. In fact there is no information about any such times on the boarding passes. It
 is just  assumed  that  your  next  connection is waiting for you when you arrive at a
 destination.
-* Although  we always produce all software in teams, and believe this working as a
-team  is  the  best  way  to  tackle  problems,  since  this  task  is  meant  to  be  an
-assessment of your personal skills, please refrain from asking friends / cooperating
-with other people while solving this task.What we look at
 
-
-##Instrucions
+##Instructions
 * Run Rails console by typing <code>rails c</code>
 * Load tickets script
     *<code>require './scripts/load_tickets.rb'</code>
