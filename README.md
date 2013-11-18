@@ -1,5 +1,5 @@
-== README
-
+README
+======
 ##Task
 You are given a stack of boarding cards for various transportations that will take you from a
 point A to point B via several stops on the way. All of the boarding cards are out of order
@@ -34,6 +34,13 @@ destination.
 ##Instructions
 * Run Rails console by typing <code>rails c</code>
 * Load tickets script
-    *<code>require './scripts/load_tickets.rb'</code>
-    *<code>load_default_file</code>
-* Tickets are stored at <code>./scripts/tickets.json</code>
+    <code>require './scripts/load_tickets.rb'</code> &&
+    <code>load_default_file</code>
+* Tickets are stored in JSON format at <code>./scripts/tickets.json</code>
+
+##Approach
+* No scaffolding
+* Test first
+* No GUI, focus on application logic
+
+I had no time for make sorting work.  I found my gap for this kind of algorithms in Ruby because I usually worked with Java and C++ and tried to use Ruby's Enumerator methods.
