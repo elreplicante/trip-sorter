@@ -41,6 +41,6 @@ destination.
 ##Approach
 * No scaffolding
 * Test first
-* No GUI, focus on application logic
+* No GUI, focus on application logic and data entry format
 
 I had no time for make sorting work.  I found my gap for this kind of algorithms in Ruby because I usually worked with Java and C++ and tried to use Ruby's Enumerator methods.
